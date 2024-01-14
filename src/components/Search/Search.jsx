@@ -36,10 +36,13 @@ export default function Search() {
     setValidated(true);
 
     event.preventDefault();
-    const { REACT_APP_API_KEY: API_KEY, REACT_APP_API_URL: API_URL } =
-      process.env;
-    console.log(API_KEY);
-    console.log(API_URL);
+    // const { REACT_APP_API_KEY: API_KEY, REACT_APP_API_URL: API_URL } =
+    //   process.env;
+    // console.log(API_KEY);
+    //   console.log(API_URL);
+
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_URL = process.env.REACT_APP_API_URL;
     // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
     const apiUrl = `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`;
     axios.get(apiUrl).then(handleResponse);

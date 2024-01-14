@@ -1,6 +1,3 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-
 export default function WeatherForecast() {
   return (
     <div className="row text-center justify-content-center ">
